@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: melichalenge-proxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: melichalenge-proxy
+  template:
+    metadata:
+      labels:
+        app: melichalenge-proxy
+    spec:
+      containers:
+        - name: melichalenge-proxy
+          image: ardevoposscrumboxit/challenge-meli:latest
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: melichalenge-proxy
+spec:
+  selector:
+    app: melichalenge-proxy
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      nodePort: 32080  # Especifica un puerto dentro del rango 30000-32767
+  type: NodePort
