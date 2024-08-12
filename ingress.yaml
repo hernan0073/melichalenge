@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: melichalenge-proxy-ingress
+spec:
+  rules:
+    - host: melichalenge.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: melichalenge-proxy
+                port:
+                  number: 8080
+
