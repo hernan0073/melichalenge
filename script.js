@@ -3,7 +3,7 @@ import { check, sleep } from 'k6';
 
 export let options = {
   stages: [
-    { duration: '90s', target: 50 }, // 50,000 usuarios virtuales en 30 segundos
+    { duration: '50s', target: 50000 }, // 50,000 usuarios virtuales en 30 segundos
   ],
 };
 
