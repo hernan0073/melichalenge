@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" version="24.7.6">
+  <diagram name="Página-1" id="CGbV_Y311aUAi1F0p1Wg">
+    <mxGraphModel dx="2069" dy="691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="fRf9OIguOU2QsSByjp-j-16" value="R" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=1;size=20;indent=5;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="20" width="780" height="680" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fRf9OIguOU2QsSByjp-j-3" target="fRf9OIguOU2QsSByjp-j-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fRf9OIguOU2QsSByjp-j-3" target="fRf9OIguOU2QsSByjp-j-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-3" value="Amazon S3" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="320" y="215" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fRf9OIguOU2QsSByjp-j-4" target="fRf9OIguOU2QsSByjp-j-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-4" value="Amazon API Gateway" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="1">
+          <mxGeometry x="140" y="210" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fRf9OIguOU2QsSByjp-j-5" target="fRf9OIguOU2QsSByjp-j-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-5" value="AWS Lambda" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
+          <mxGeometry x="140" y="380" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fRf9OIguOU2QsSByjp-j-7" target="fRf9OIguOU2QsSByjp-j-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fRf9OIguOU2QsSByjp-j-7" target="fRf9OIguOU2QsSByjp-j-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-7" value="Amazon Cloudfront" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.cloudfront;" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-12" value="Amazon CloudWatch" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.cloudwatch;" vertex="1" parent="1">
+          <mxGeometry x="320" y="390" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-13" value="Amazon DynamoDB" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
+          <mxGeometry x="140" y="560" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-17" value="RateLimiter&lt;br&gt;ProxyHandler" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="390" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-19" value="&lt;meta charset=&quot;utf-8&quot;&gt;Ejecuta la lógica de negocio, consulta/actualiza DynamoDB y devuelve la respuesta al cliente." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-70" y="430" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-20" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="560" y="30" width="30" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-24" value="Almacena los datos de los users y sus configuraciones de rate limiting" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="580" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-25" value="&lt;meta charset=&quot;utf-8&quot;&gt;Monitorea la salud y el rendimiento del sistema, capturando logs y métricas" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="410" y="420" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-26" value="&lt;meta charset=&quot;utf-8&quot;&gt;Rutas a las funciones Lambda correspondientes" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="260" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="fRf9OIguOU2QsSByjp-j-20" target="fRf9OIguOU2QsSByjp-j-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fRf9OIguOU2QsSByjp-j-30" value="&lt;span style=&quot;background-color: initial;&quot;&gt;Si la solicitud es para contenido estático, CloudFront la sirve desde S3.&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Si es una solicitud dinámica (e.g., una API call), CloudFront la redirige a API Gateway.&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="50" width="440" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
