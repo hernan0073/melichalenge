@@ -1,81 +1,59 @@
-Proxy API Documentation
-Este proyecto implementa un proxy que reenvía solicitudes al dominio api.mercadolibre.com. El proxy maneja solicitudes HTTP y las redirige al API de MercadoLibre, respetando límites de tasa (rate limiting) configurables.
-
-Endpoints
 POST /rate-limit
-Configura los límites de tasa para el proxy.
 
-Request Body:
-
-json
-Copiar código
+Configura los límites de tasa del proxy.
+Cuerpo de la solicitud:
+JSON
 {
-  "rate": 1000,
-  "burst": 5
+  "rate": 1000, // Solicitudes máximas por minuto
+  "burst": 5 // Ráfaga máxima de solicitudes
 }
-rate: Número máximo de solicitudes permitidas por minuto.
-burst: Número máximo de solicitudes permitidas en ráfaga.
-Response:
 
-Status 200 OK: Confirmación de que el límite de tasa ha sido configurado.
-Status 400 Bad Request: Si el formato del cuerpo de la solicitud es inválido.
-Example:
 
-bash
-Copiar código
-curl -X POST http://localhost:8080/rate-limit -H "Content-Type: application/json" -d '{"rate": 1000, "burst": 5}'
+¡Claro! Aquí tienes una versión del README en español, con algunas mejoras adicionales:
+
+README.md en Español: Proxy API para MercadoLibre
+Descripción
+Este proyecto implementa un proxy que actúa como intermediario entre tus aplicaciones y la API de MercadoLibre (api.mercadolibre.com). El proxy se encarga de reenviar las solicitudes a la API de MercadoLibre y de administrar los límites de tasa, asegurando que no se excedan las restricciones impuestas por la API.
+
+Funcionalidades
+Limitación de Tasa: Permite configurar límites de tasa por IP y por ruta para evitar sobrecargar la API de MercadoLibre.
+Métricas: Exporta métricas en formato Prometheus para monitorear el rendimiento del proxy.
+CORS: Soporta solicitudes CORS desde dominios específicos.
+Manejo de Errores: Maneja errores comunes como límites de tasa excedidos y errores internos del servidor.
+Endpoints
+Configuración
+POST /rate-limit
+Configura los límites de tasa del proxy.
+Cuerpo de la solicitud:
+JSON
+{
+  "rate": 1000, // Solicitudes máximas por minuto
+  "burst": 5 // Ráfaga máxima de solicitudes
+}
+Usa el código con precaución.
+
+Respuesta:
+200 OK: Configuración exitosa.
+400 Bad Request: Cuerpo de la solicitud inválido.
+
+Métricas
+
 GET /metrics
-Exposición de métricas para Prometheus.
 
-Response:
+Exporta métricas en formato Prometheus.
+Proxy
 
-Status 200 OK: Devuelve métricas en formato Prometheus.
-Example:
-
-bash
-Copiar código
-curl http://localhost:8080/metrics
 GET /{path}
-Reenvía solicitudes al dominio https://api.mercadolibre.com.
+Reenvía la solicitud a https://api.mercadolibre.com/{path}.
 
-Path Parameters:
+Manejo de Errores
 
-{path}: El endpoint de la API de MercadoLibre que se desea consultar.
-Response:
+429 Too Many Requests: Se devuelve cuando se excede el límite de tasa.
+500 Internal Server Error: Se devuelve en caso de errores internos o fallos de comunicación con la API de MercadoLibre.
 
-Devuelve la respuesta del API de MercadoLibre sin redirección ni caché.
-Example:
+Dependencias
 
-bash
-Copiar código
-curl http://localhost:8080/categories/MLA97994
-Rate Limiting
-El proxy implementa un sistema básico de rate limiting que se configura por IP y por ruta:
-
-IP 152.152.152.152: Se permite un máximo de 1000 solicitudes por minuto.
-Path /categories/*: Se permite un máximo de 10,000 solicitudes por minuto.
-IP 152.152.152.152 y Path /items/*: Se permite un máximo de 10 solicitudes por minuto.
-CORS Configuration
-El proxy está configurado para permitir solicitudes desde http://localhost:3000 con los siguientes métodos HTTP:
-
-GET
-POST
-OPTIONS
-Y los siguientes encabezados permitidos:
-
-Content-Type
-Authorization
-Error Handling
-Rate Limit Exceeded: Si se supera el límite de tasa configurado, se devuelve un error 429 Too Many Requests.
-Internal Server Error: Si ocurre un error al procesar la solicitud o al comunicarse con el API de MercadoLibre, se devuelve un error 500 Internal Server Error.
-Dependencies
-Gorilla Mux: Para el enrutamiento de solicitudes.
-Prometheus Go Client: Para la exposición de métricas.
-Gorilla Handlers: Para la configuración de CORS.
-Rate Limiter: Para la implementación del control de tasa.
-Running the Application
-Asegúrate de tener Go instalado.
-Clona el repositorio.
-Instala las dependencias con go mod tidy.
-Ejecuta la aplicación con go run main.go.
-La aplicación se ejecutará en el puerto 8080.
+Gorilla Mux: Para el enrutamiento de las solicitudes.
+Prometheus Go Client: Para exportar métricas.
+Gorilla Handlers: Para configurar CORS.
+Rate Limiter: Para implementar la limitación de tasa.
